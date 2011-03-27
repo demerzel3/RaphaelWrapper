@@ -35,13 +35,16 @@ Raphael.Element = SC.Object.extend(
 
   init: function() {
     // load location from attrs
-    if (this.attrs && this.attrs["location"])
+    if (!SC.none(this.attrs) && this.attrs["location"])
     {
       this.set("location", this.attrs["location"]);
       delete this.attrs["location"];
     }
     if (SC.none(this.location)) {
       this.location = {x: 0, y: 0};
+    }
+    if (SC.none(this.attrs)) {
+      this.attrs = {};
     }
   },
 
@@ -317,7 +320,7 @@ Raphael.Element = SC.Object.extend(
   },
   _checkDrag: function() {
     if (SC.none(this._dragEvent)) {
-      throw new SC.Error.desc("Element is not being dragged");
+      throw SC.Error.desc("Element is not being dragged");
     }
   },
   getDragLocation: function(dx, dy) {
