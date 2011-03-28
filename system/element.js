@@ -372,6 +372,19 @@ Raphael.Element = SC.Object.extend(
       return NO;
   },
 
+  fadeOut: function(duration) {
+    if (this.attr("opacity") != 0) {
+      duration = duration || 200;
+      this.animate({opacity: 0}, duration);
+    }
+  },
+  fadeIn: function(duration) {
+    if (this.attr("opacity") != 1) {
+      duration = duration || 200;
+      this.animate({opacity: 1}, duration);
+    }
+  },
+
 
   // .......................................................
   // SC.RESPONDER SUPPORT
