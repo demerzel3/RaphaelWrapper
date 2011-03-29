@@ -5,7 +5,7 @@
  * Licensed under the MIT (http://raphaeljs.com/license.html) license.
  *
  *
- * Fixed for undrag made by Gabriele Genta.
+ * NOTE: Fixes for undrag made by Gabriele Genta.
  */
 (function () {
     function R() {

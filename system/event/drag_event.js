@@ -1,9 +1,8 @@
-/**
- * Created by JetBrains PhpStorm.
- * User: assa
- * Date: 18/03/11
- * Time: 22.57
- * To change this template use File | Settings | File Templates.
+/*!
+ * RaphaelWrapper Sproutcore Framework
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
  */
 Raphael.DragEvent = SC.Object.extend(
 /** @scope Raphael.DragEvent.prototype */ {

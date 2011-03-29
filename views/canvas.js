@@ -1,15 +1,14 @@
-// ==========================================================================
-// Project:   Calliope.RaphaelView
-// Copyright: ©2010 My Company, Inc.
-// ==========================================================================
-/*globals Calliope */
+/*!
+ * RaphaelWrapper Sproutcore Framework
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
+ */
 
-/** @class
-
-  (Document Your View Here)
-
-  @extends SC.View
-*/
+/**
+ * @class
+ * @extends SC.View
+ */
 Raphael.CanvasView = SC.View.extend(
 /** @scope Raphael.CanvasView.prototype */ {
 
