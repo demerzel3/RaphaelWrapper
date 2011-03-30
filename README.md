@@ -20,10 +20,15 @@ Alternatively, you can just checkout the repository into your frameworks directo
 
 Important: don't forget to add `raphael_wrapper` to the frameworks required by your project in your `Buildfile`.
 
+Showcase
+--------
+
+See the framework in action, [click here](http://www.playcalliope.com/raphael_wrapper/showcase).
+
 Usage
 -----
 
-_A usage example is in the making, contact me for more information._
+Please refer to the [source code of the showcase](https://github.com/demerzel3/RaphaelWrapperShowcase).
 
 About The Author
 ----------------
