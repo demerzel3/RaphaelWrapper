@@ -23,8 +23,11 @@ Important: don't forget to add `raphael_wrapper` to the frameworks required by y
 Showcase
 --------
 
-![RaphaelWrapper showcase screenshot](http://gabrielegenta.files.wordpress.com/2011/03/raphaelwrapper_showcase.png)
-[Click here to see the live demo](http://www.playcalliope.com/raphael_wrapper/showcase)
+[![RaphaelWrapper showcase screenshot][2]][1]
+[Click here to see the live demo][1]
+
+[2]: http://gabrielegenta.files.wordpress.com/2011/03/raphaelwrapper_showcase.png
+[1]: http://www.playcalliope.com/raphael_wrapper/showcase
 
 Usage
 -----
