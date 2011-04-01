@@ -338,17 +338,19 @@ Raphael.Element = SC.Object.extend(
   },
   dragEnd: function(isNative) {
     this._checkDrag();
+    // make sure to mark the drag operation as ended
+    var dragEvent = this._dragEvent;
+    this._dragEvent = null;
     this.animate({opacity: 1}, 100);
 
-    this._dragEvent.isNative = isNative;
-    var isValidated = this._notifyCanvas("elementDragEnd", [this._dragEvent]);
+    dragEvent.isNative = isNative;
+    var isValidated = this._notifyCanvas("elementDragEnd", [dragEvent]);
 
     if (!isValidated) {
-      this.rollbackDrag(this._dragEvent);
+      this.rollbackDrag(dragEvent);
     } else {
-      this.commitDrag(this._dragEvent);
+      this.commitDrag(dragEvent);
     }
-    this._dragEvent = null;
   },
   commitDrag: function(dragEvent) {
     // really nothing to do here.
