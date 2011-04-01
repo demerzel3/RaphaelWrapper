@@ -1,7 +1,8 @@
-/**
- * User: assa
- * Date: 6-ott-2010
- * Time: 20.41.49
+/*!
+ * RaphaelWrapper Sproutcore Framework
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
  */
 Raphael.Group = Raphael.Element.extend(
 /** @scope Raphael.Group.prototype */{

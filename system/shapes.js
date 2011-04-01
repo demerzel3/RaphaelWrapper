@@ -1,9 +1,9 @@
-/**
- * User: assa
- * Date: 7-ott-2010
- * Time: 9.15.31
+/*!
+ * RaphaelWrapper Sproutcore Framework
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
  */
-
 Raphael.Rect = Raphael.Element.extend({
   createNativeElement: function(canvas, nativeCanvas) {
     return nativeCanvas.rect(

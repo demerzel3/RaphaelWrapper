@@ -1,15 +1,14 @@
-// ==========================================================================
-// Project:   Calliope.RaphaelView
-// Copyright: ©2010 My Company, Inc.
-// ==========================================================================
-/*globals Calliope */
+/*!
+ * RaphaelWrapper Sproutcore Framework
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
+ */
 
-/** @class
-
-  (Document Your View Here)
-
-  @extends SC.View
-*/
+/**
+ * @class
+ * @extends SC.View
+ */
 Raphael.CanvasView = SC.View.extend(
 /** @scope Raphael.CanvasView.prototype */ {
 
@@ -17,6 +16,16 @@ Raphael.CanvasView = SC.View.extend(
   backgroundColor: "#fff",
   // reference to the native Raphael canvas
   nativeCanvas: null,
+  /**
+   * List of elements added to the canvas through the method add.
+   * TODO: make direct definition of children possible in design mode.
+   */
+  children: null,
+
+  init: function() {
+    sc_super();
+    this.children = [];
+  },
 
   didCreateLayer: function() {
     //sc_super();
@@ -36,9 +45,20 @@ Raphael.CanvasView = SC.View.extend(
 
   add: function(element) {
     element.addToCanvas(this);
+    this.children.pushObject(element);
   },
   remove: function(element) {
     element.removeFromCanvas();
+    this.children.removeObject(element);
+  },
+  /**
+   * Deletes all added elements from the canvas
+   */
+  removeAll: function() {
+    for (var i = 0; i < this.children.length; i++) {
+      this.children[i].removeFromCanvas();
+    }
+    this.children = [];
   },
 
   /////////////////////////////////////////////////////////
