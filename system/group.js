@@ -114,7 +114,12 @@ Raphael.Group = Raphael.Element.extend(
   },
   attr: function(attr) { this._elements.invoke("attr", attr); },
   toFront: function() { this._elements.invoke("toFront"); },
-  toBack: function() { this._elements.invoke("toBack"); }
+  toBack: function() {
+    // must invoke toBack in inverse order to preserve internal group z-order
+    for (var i = this._elements.length-1; i >= 0; i--) {
+      this._elements[i].toBack();
+    }
+  }
 
   // Automatically handled by the implementation in "element"
   //dragBegin: function() { this._elements.invoke("dragBegin"); },
